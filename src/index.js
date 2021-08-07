@@ -1,4 +1,4 @@
-import getImagesUrlsFromRedditUrl from './getImagesUrlsFromRedditUrl';
+import getImageDataFromRedditUrl from './getImageDataFromRedditUrl';
 
 addEventListener('fetch', event => {
   event.respondWith(
@@ -26,7 +26,7 @@ async function handleRequest(request) {
     typeof json.url === 'string' &&
     /https:.*reddit.*comments/i.test(json.url)
   ) {
-    result = await getImagesUrlsFromRedditUrl(json.url);
+    result = await getImageDataFromRedditUrl(json.url);
   }
 
   const responseBody = {

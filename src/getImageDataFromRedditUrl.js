@@ -1,7 +1,17 @@
 const WWW_REDDIT_GALLERY_URL = 'https://www.reddit.com/gallery';
 const REDDIT_GALLERY_URL = 'https://reddit.com/gallery';
 
-async function getImagesUrlsFromRedditUrl(url) {
+/**
+ *
+ * @param {string} url
+ * @returns {{
+ * author: string,
+ * title: string,
+ * permalink: string,
+ * images: string[],
+ * }}
+ */
+async function getImageDataFromRedditUrl(url) {
   url = url.replace(/\/$/, '') + '.json';
   const redditRes = await fetch(url);
   const json = await redditRes.json();
@@ -52,4 +62,4 @@ async function getImagesUrlsFromRedditUrl(url) {
   return { author, title, permalink, images };
 }
 
-export default getImagesUrlsFromRedditUrl;
+export default getImageDataFromRedditUrl;
