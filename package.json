@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write '**/*.{js,css,json,md}'"
+    "format": "prettier --write \"{,!(node_modules|dist|build|worker)/**/}*.{js,jsx,ts,tsx,css,json}\""
   },
   "author": "Daniel Gill <dwgill@outlook.com>",
   "license": "MIT",

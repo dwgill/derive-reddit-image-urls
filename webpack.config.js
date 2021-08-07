@@ -1,7 +1,8 @@
 /** @type {import('@types/webpack').Configuration} */
 const configuration = {
   target: 'webworker',
-  entry: './index.js',
+  entry: './src/index.js',
+  // mode: 'none',
   module: {
     rules: [
       {
