@@ -1,0 +1,9 @@
+name = "derive-reddit-image-urls"
+type = "webpack"
+
+webpack_config = 'webpack.config.js'
+
+account_id = "78612c75964671bd54f1f68ac0022f9f"
+workers_dev = true
+# route = ""
+# zone_id = ""
