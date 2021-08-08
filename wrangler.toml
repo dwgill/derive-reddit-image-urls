@@ -7,3 +7,9 @@ account_id = "78612c75964671bd54f1f68ac0022f9f"
 workers_dev = true
 # route = ""
 # zone_id = ""
+
+[vars]
+IMGUR_CLIENT_ID = 'd4caf802c12ae43'
+
+# [secrets]
+# IMGUR_CLIENT_SECRET
