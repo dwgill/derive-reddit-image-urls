@@ -2,7 +2,7 @@
 const configuration = {
   target: 'webworker',
   entry: './src/index.js',
-  // mode: 'none',
+  mode: 'none',
   module: {
     rules: [
       {
@@ -26,4 +26,3 @@ const configuration = {
 };
 
 module.exports = configuration;
-``;
