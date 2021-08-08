@@ -1,3 +1,5 @@
+import getImageUrlsFromImgurAlbumUrl from './getDataFromImgurUrl';
+
 const WWW_REDDIT_GALLERY_URL = 'https://www.reddit.com/gallery';
 const REDDIT_GALLERY_URL = 'https://reddit.com/gallery';
 
@@ -53,12 +55,10 @@ async function getImageDataFromRedditUrl(url) {
           return null;
         })
         .filter(x => !!x) ?? [];
+  } else if (/https:\/\/imgur.com\/a\/.*/.test(originalPosterData.url)) {
+    // It's an imgur album of images
+    images = await getImageUrlsFromImgurAlbumUrl(originalPosterData.url);
   }
-  /**
-   * cannot handle imgur albums yet such as
-   * https://imgur.com/a/iItVZDf
-   * But there might be a way to do it by appending /zip to the end.
-   */
   return { author, title, permalink, images };
 }
 

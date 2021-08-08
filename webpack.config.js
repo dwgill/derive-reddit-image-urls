@@ -15,6 +15,7 @@ const configuration = {
               noDocumentAll: true,
             },
             plugins: [
+              // Webpack 4's parser breaks with the .? and ?? operators, so we use babel JUST to transpile those.
               '@babel/plugin-proposal-optional-chaining',
               '@babel/plugin-proposal-nullish-coalescing-operator',
             ],
